@@ -37,9 +37,9 @@
         <td><a href="https://github.com/aaditgupta21/fire-extinguisher/commits/main?author=jacksongolding">Commits</a></td>
     </tr>
     <tr>
-        <td>Somaditya Singh</td>
-        <td><a href="https://github.com/somaditya1">@somaditya1</a></td>
-        <td><a href="https://github.com/aaditgupta21/silverscreen/issues/assigned/somaditya1">Tasks</a></td>
-        <td><a href="https://github.com/aaditgupta21/fire-extinguisher/commits/main?author=somaditya1">Commits</a></td>
+         <td>Raiden Tung</td>
+        <td><a href="https://github.com/MadCacti">@MadCacti</a></td>
+        <td><a href="https://github.com/aaditgupta21/Fotography/issues/assigned/MadCacti">Tasks</a></td>
+        <td><a href="https://github.com/aaditgupta21/Fotography/commits/main?author=MadCacti">Commits</a></td>
     </tr>
 </table>

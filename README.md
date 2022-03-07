@@ -1,18 +1,9 @@
 # Fotography
 
 
-## Table Of Contents
-
-  - [Project Credits](https://github.com/aaditgupta21/fire-extinguisher#project-credits)
-  - [Week 0](https://github.com/aaditgupta21/fire-extinguisher#week-0)
-  - [Week 1](https://github.com/aaditgupta21/fire-extinguisher#week-1)
-  - [Week 2](https://github.com/aaditgupta21/fire-extinguisher#week-2)
-  - [Week 3](https://github.com/aaditgupta21/fire-extinguisher#week-3)
-
-
 ## Project Credits
 
-### [Runtime Link](https://silverscreen.aadit.dev/)
+### [Runtime Link]()
 
 <table>
   <tr>

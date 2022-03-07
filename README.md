@@ -27,8 +27,8 @@
     <tr>
         <td>Krishnadev Lakshminarayanan</td>
         <td><a href="https://github.com/KrishnadevL">@KrishnadevL</a></td>
-        <td><a href="https://github.com/aaditgupta21/silverscreen/issues/assigned/KrishnadevL">Tasks</a></td>
-        <td><a href="https://github.com/aaditgupta21/fire-extinguisher/commits/main?author=KrishnadevL">Commits</a></td>
+        <td><a href="https://github.com/aaditgupta21/Fotography/issues/assigned/KrishnadevL">Tasks</a></td>
+        <td><a href="https://github.com/aaditgupta21/Fotography/commits/main?author=KrishnadevL">Commits</a></td>
     </tr>
     <tr>
         <td>Jackson Golding</td>

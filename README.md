@@ -6,16 +6,6 @@
 ### [Runtime Link]()
 
 <table>
-  <tr>
-    <td><a href="https://github.com/aaditgupta21/silverscreen/projects/1">Scrum Board</a></td>
-    <td><a href="https://github.com/aaditgupta21/silverscreen/graphs/contributors">Insight Graphs</a></td>
-    <td><a href="https://docs.google.com/document/d/1O_z7LxB0fQgh0clW7x66MZXiWT9EquWpjLglOYVDZ28/edit">Rohit and Aadit Journal</a></td>
-    <td><a href="https://docs.google.com/document/d/1NHEF5wsxPDtWu_Tvxfm1gF2wclkw2D_i25dwI-Jjnjk/edit">Jason, Jackson, and Soma Journal</a></td>
-  </tr>
-</table>
-
-
-<table>
     <tr>
         <td>Contributors</td>
         <td>GitHub</td>

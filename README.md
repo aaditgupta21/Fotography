@@ -30,12 +30,12 @@
         <td><a href="https://github.com/aaditgupta21/Fotography/issues/assigned/KrishnadevL">Tasks</a></td>
         <td><a href="https://github.com/aaditgupta21/Fotography/commits/main?author=KrishnadevL">Commits</a></td>
     </tr>
-<!--     <tr>
-        <td>Jackson Golding</td>
-        <td><a href="https://github.com/jacksongolding">@jacksongolding</a></td>
-        <td><a href="https://github.com/aaditgupta21/silverscreen/issues/assigned/K3wl-AidMan">Tasks</a></td>
-        <td><a href="https://github.com/aaditgupta21/fire-extinguisher/commits/main?author=jacksongolding">Commits</a></td>
-    </tr> -->
+     <tr>
+        <td>Gaurish "Big G" Gaur</td>
+        <td><a href="https://github.com/gaurish-gaur">@gaurish-gaur</a></td>
+        <td><a href="https://github.com/aaditgupta21/silverscreen/issues/assigned/gaurish-gaur>Tasks</a></td>
+        <td><a href="https://github.com/aaditgupta21/fire-extinguisher/commits/main?author=gaurish-gaur">Commits</a></td>
+    </tr> 
     <tr>
          <td>Raiden Tung</td>
         <td><a href="https://github.com/MadCacti">@MadCacti</a></td>

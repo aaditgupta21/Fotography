@@ -1,4 +1,4 @@
-# Fotography
+# KoolSkool
 
 
 ## Project Credits

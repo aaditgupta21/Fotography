@@ -43,3 +43,41 @@
         <td><a href="https://github.com/aaditgupta21/Fotography/commits/main?author=MadCacti">Commits</a></td>
     </tr>
 </table>
+
+
+## Week 00 > March 7 - 11
+
+
+
+<table>
+    <tr>
+        <td>Name</td>
+        <td>Progress</td>
+        <td>Ticket</td>
+    </tr>
+    <tr>
+        <td>Aadit</td>
+        <td>Worked on individual tasks</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Rohit</td>
+        <td>Worked on individual tasks and ideation</td>
+        <td>https://github.com/aaditgupta21/koolskool/issues/2 Ticket </td>
+    </tr>
+    <tr>
+        <td>Krish</td>
+        <td>Worked on individual tasks and ideation, screen wireframe</td>
+        <td>https://github.com/aaditgupta21/koolskool/issues/2 Ticket</a></td>
+    </tr>
+    <tr>
+        <td>Gaurish</td>
+        <td>Worked on individual tasks and ideation</td>
+        <td>https://github.com/aaditgupta21/koolskool/issues/2 Ticket</a></td>
+    </tr>
+    <tr>
+        <td>Raiden</td>
+        <td>Worked on individual tasks and ideation</td>
+        <td>https://github.com/aaditgupta21/koolskool/issues/2 Ticket</td>
+    </tr>
+</table>

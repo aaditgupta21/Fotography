@@ -67,7 +67,7 @@
     </tr>
     <tr>
         <td>Krish</td>
-        <td>Worked on individual tasks and ideation, screen wireframe</td>
+        <td>Worked on individual tasks and ideation, wireframe</td>
         <td>https://github.com/aaditgupta21/koolskool/issues/2 Ticket</a></td>
     </tr>
     <tr>

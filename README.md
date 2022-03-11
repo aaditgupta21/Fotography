@@ -8,36 +8,48 @@
 <table>
     <tr>
         <td>Contributors</td>
+        <td>Role</td>
+        <td>Role Description</td>
         <td>GitHub</td>
         <td>Tasks</td>
         <td>Commits</td>
     </tr>
     <tr>
         <td>Aadit Gupta</td>
+        <td>Deployment Manager</td>
+        <td>Deploys website to real runtime, manages and updates website.</td>
         <td><a href="https://github.com/aaditgupta21">@aaditgupta21</a></td>
         <td><a href="https://github.com/aaditgupta21/Fotography/issues/assigned/aaditgupta21">Tasks</a></td>
         <td><a href="https://github.com/aaditgupta21/Fotography/commits/main?author=aaditgupta21">Commits</a></td>
     </tr>
     <tr>
         <td>Rohit De</td>
+        <td>Scrum Master</td>
+        <td>Team Manager for Scrum Team and manages Scrum Board. Leader.</td>
         <td><a href="https://github.com/rohitd3">@rohitd3</a></td>
         <td><a href="https://github.com/aaditgupta21/Fotography/issues/assigned/rohitd3">Tasks</a></td>
         <td><a href="https://github.com/aaditgupta21/Fotography/commits/main?author=rohitd3">Commits</a></td>
     </tr>
     <tr>
         <td>Krishnadev Lakshminarayanan</td>
+        <td>Designer</td>
+        <td>Designs layouts and wireframes for website theme and baseline.</td>
         <td><a href="https://github.com/KrishnadevL">@KrishnadevL</a></td>
         <td><a href="https://github.com/aaditgupta21/Fotography/issues/assigned/KrishnadevL">Tasks</a></td>
         <td><a href="https://github.com/aaditgupta21/Fotography/commits/main?author=KrishnadevL">Commits</a></td>
     </tr>
      <tr>
         <td>Gaurish "Big G" Gaur</td>
+        <td>Github Admin</td>
+        <td>Helps Scrum Master with github issues/scrumboard and set up wikis and polices.</td>
         <td><a href="https://github.com/gaurish-gaur">@gaurish-gaur</a></td>
         <td><a href="https://github.com/aaditgupta21/Fotography/issues/assigned/gaurish-gaur">Tasks</a></td>
         <td><a href="https://github.com/aaditgupta21/Fotography/commits/main?author=gaurish-gaur">Commits</a></td>
     </tr> 
     <tr>
-         <td>Raiden Tung</td>
+        <td>Raiden Tung</td>
+        <td>Designer/Organizer</td>
+        <td>Helps Krish with designing layouts/wireframes as well as check on code frequently to ensure cleanliness, nonredundancy and legibility.</td>
         <td><a href="https://github.com/MadCacti">@MadCacti</a></td>
         <td><a href="https://github.com/aaditgupta21/Fotography/issues/assigned/MadCacti">Tasks</a></td>
         <td><a href="https://github.com/aaditgupta21/Fotography/commits/main?author=MadCacti">Commits</a></td>

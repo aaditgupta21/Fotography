@@ -1,4 +1,4 @@
-# KoolSkool
+# Fotography
 
 
 ## Project Credits
@@ -69,8 +69,8 @@
     </tr>
     <tr>
         <td>Aadit</td>
-        <td>Worked on individual tasks</td>
-        <td></td>
+        <td>Worked on individual tasks and github pages</td>
+        <td>https://aaditgupta21.github.io/koolskool/ Link to github pages https://aaditgupta21.github.io/csp-notes/ Individual work </td>
     </tr>
     <tr>
         <td>Rohit</td>

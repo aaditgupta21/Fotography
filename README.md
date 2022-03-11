@@ -45,7 +45,7 @@
 </table>
 
 
-## Week 00 > March 7 - 11
+## Week 00
 
 
 

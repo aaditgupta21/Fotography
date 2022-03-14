@@ -85,7 +85,7 @@
     </tr>
     <tr>
         <td>Krish</td>
-        <td>Worked on [individual tasks](https://krishnadevl.github.io/AlgorithmsCS3/) and ideation, wireframe</td>
+        <td>Worked on [individual tasks](https://krishnadevl.github.io/AlgorithmsCS3) and ideation, wireframe</td>
         <td>https://github.com/aaditgupta21/koolskool/issues/2 Ticket</a></td>
     </tr>
     <tr>

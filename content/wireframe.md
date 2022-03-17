@@ -1,3 +1,6 @@
+{% include navigation.html %}
+
+
 ## Wireframes 
 These are some basic ideas we hd for layouts for our pages
 

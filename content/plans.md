@@ -1,3 +1,5 @@
+{% include navigation.html %}
+
 # For the future of ASB, we hope to:
 
 - Create efficient methods to display information about events such as sports, plays, performances, and more

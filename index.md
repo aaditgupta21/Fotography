@@ -1,5 +1,6 @@
 ## Welcome to the ASB's future website
 
+Scrum Board: https://github.com/aaditgupta21/koolskool/projects/1
 ### Description: 
 With an ever developing internet, we wanted to update our schools older format for their website. As such, we wanted people to ahve na asier exprience with ASB and acessing thier conten , so we decided to design a updated version of thier website ot organize information and create a better user experience. 
 

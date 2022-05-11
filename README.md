@@ -100,3 +100,40 @@
         <td>https://github.com/aaditgupta21/koolskool/issues/2 Ticket</td>
     </tr>
 </table>
+
+## Week 08
+
+
+
+<table>
+    <tr>
+        <td>Name</td>
+        <td>Progress</td>
+        <td>Ticket</td>
+    </tr>
+    <tr>
+        <td>Aadit</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Rohit</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Krish</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Gaurish</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Raiden</td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>

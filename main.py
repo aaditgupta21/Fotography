@@ -2,13 +2,12 @@
 import json
 
 # import app as app
-from flask import render_template, request
-from __init__ import app
+from flask import render_template, request, Flask
 
 # create a Flask instance
+app = Flask(__name__)
 
 # connects default URL to render index.html
-
 
 @app.route('/')
 def index():

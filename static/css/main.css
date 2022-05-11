@@ -24,6 +24,8 @@ html, body{
 }
 h1 {
     font-size: 5em;
+    font-family: 'Montserrat';
+    font-style: normal;
 }
 
 .navbar-custom {
@@ -32,18 +34,21 @@ h1 {
 
 .navbar a,
 .navbar a:hover {
-    font-family: "Times New Roman", Times, serif;
+    font-family: 'Montserrat';
+    font-style: normal;
 }
 .navbar a:active {
     color: var(--navTextColor);
-    font-family: "Times New Roman", Times, serif;
+    font-family: 'Montserrat';
+    font-style: normal;
 }
 
 .content,
 .content a,
 .content a:hover {
     color: var(--contentTextColor);
-    font-family: "Times New Roman", Times, serif;
+    font-family: 'Montserrat';
+    font-style: normal;
 }
 .navbar-text {
     color: var(--textColor);
@@ -60,15 +65,18 @@ h1 {
 
 ul.dropdown-menu {
     background-color: #f8f9ff;
-    font-family: "Times New Roman", Times, serif;
+    font-family: 'Montserrat';
+    font-style: normal;
 }
 ul.dropdown-menu:hover {
     background-color: #f0f1fa;
-    font-family: "Times New Roman", Times, serif;
+    font-family: 'Montserrat';
+    font-style: normal;
 }
 .nav > li > a:focus, .nav > li > a:hover {
     background-color: #fffdfd;
-    font-family: "Times New Roman", Times, serif;
+    font-family: 'Montserrat';
+    font-style: normal;
 }
 .switch {
     position: relative;

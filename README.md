@@ -76,7 +76,8 @@
     <tr>
         <td>Aadit</td>
         <td>Worked on individual tasks and github pages</td>
-        <td>https://aaditgupta21.github.io/koolskool/ Link to github pages https://aaditgupta21.github.io/csp-notes/ Individual work </td>
+        <td><a href="https://aaditgupta21.github.io/koolskool/">Link to github pages</a> 
+        <a href="https://aaditgupta21.github.io/csp-notes/">Individual work</a> </td>
     </tr>
     <tr>
         <td>Rohit</td>
@@ -97,5 +98,42 @@
         <td>Raiden</td>
         <td>Worked on individual tasks and ideation</td>
         <td>https://github.com/aaditgupta21/koolskool/issues/2 Ticket</td>
+    </tr>
+</table>
+
+## Week 08
+
+
+
+<table>
+    <tr>
+        <td>Name</td>
+        <td>Progress</td>
+        <td>Ticket</td>
+    </tr>
+    <tr>
+        <td>Aadit</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Rohit</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Krish</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Gaurish</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Raiden</td>
+        <td></td>
+        <td></td>
     </tr>
 </table>

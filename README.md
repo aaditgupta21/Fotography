@@ -76,7 +76,8 @@
     <tr>
         <td>Aadit</td>
         <td>Worked on individual tasks and github pages</td>
-        <td>https://aaditgupta21.github.io/koolskool/ Link to github pages https://aaditgupta21.github.io/csp-notes/ Individual work </td>
+        <td><a href="https://aaditgupta21.github.io/koolskool/">Link to github pages</a> 
+        <a href="https://aaditgupta21.github.io/csp-notes/">Individual work</a> </td>
     </tr>
     <tr>
         <td>Rohit</td>

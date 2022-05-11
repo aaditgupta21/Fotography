@@ -133,7 +133,7 @@
     </tr>
     <tr>
         <td>Raiden</td>
-        <td></td>
+        <td>CSS and backended</td>
         <td></td>
     </tr>
 </table>

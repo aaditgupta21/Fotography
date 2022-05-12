@@ -113,7 +113,7 @@
     </tr>
     <tr>
         <td>Aadit</td>
-        <td></td>
+        <td>Google Firebase Auth</td>
         <td></td>
     </tr>
     <tr>

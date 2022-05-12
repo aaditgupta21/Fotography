@@ -3,6 +3,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/static/css/main.css" type="text/css">
+    <link rel="stylesheet" href="/static/css/text.css" type="text/css">
+
     <script type="module" src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
     <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
     {% block meta %}{% endblock %}
@@ -12,11 +14,17 @@
 
 
 <nav class="navbar navbar-expand-lg navbar-custom ">
-    <ul style="padding-left: 45px" class="nav navbar-nav">
-        <li class="nav-item">
-            <a style="font-size: 20px" class="nav-link" href={{ url_for('index') }}>  Home  </a>
-            <a style="font-size: 20px" class="nav-link" href={{ url_for('login') }}>  Login  </a>
+    <ul class="nav nav-item navbar-text navbar-nav mr-auto">
+        <li class="nav-item navbar-text">
+        <li class="nav-item dropdown navbar-text" id="homeBody">
+        <li style="padding-left: 15px; float: right" class="nav-item">
+            <a style="font-size: 20px" class="nav-link" href={{ url_for('index') }}>Home</a>
         </li>
+        <li style="padding-right: 15px" class="nav-item">
+            <a style="font-size: 20px" class="nav-link" href={{ url_for('login') }}>Login</a>
+        </li>
+        </li>
+    </ul>
     </ul>
 
 </nav>

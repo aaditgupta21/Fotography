@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+html, body{
+    margin: 0;
+    height: 100%;
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+    background-color: var(--bgColor);
+    color: var(--textColor);
+    font-family: 'Montserrat', sans-serif; !important;
+}
+
+.content {
+    margin: 1em;
+}
+h1 {
+    font-size: 5em;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+}
+
+.navbar-custom {
+    background-color: #7dacaf;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.navbar a,
+.navbar a:hover {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    background-color: #7dacaf;
+}
+.navbar a:active {
+    color: var(--navTextColor);
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+}
+
+.content,
+.content a,
+.content a:hover {
+    color: var(--contentTextColor);
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+}
+.navbar-text {
+    color: var(--textColor);
+    font-family: 'Montserrat', sans-serif;
+
+}
+.baseNav, nav-link, nav-item, nav, navbar-nav, mr-auto {
+    background-color: #7dacaf;
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 600;
+
+}
+.navbar-right{
+    position: fixed;
+    top: 10px;
+    right: 5px;/*pixels away from the right of the navbar*/
+    font-family: 'Montserrat', sans-serif;
+}
+
+ul.dropdown-menu {
+    background-color: #f8f9ff;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+}
+ul.dropdown-menu:hover {
+    background-color: #f0f1fa;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+}
+.nav > li > a:focus, .nav > li > a:hover {
+    background-color: #fffdfd;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+
+centerblock {
+    position: absolute;
+    width: 706px;
+    height: 233px;
+    left: 284px;
+    top: 339px;
+
+    background: linear-gradient(98.16deg, #7DACAF 0%, #FFF2C6 100%);
+    border-radius: 68px;
+}
+
+
+h1,h2, buttonlearn{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    color: #FFFFFF;
+}
+buttonlearn{
+    position: absolute;
+    width: 300px;
+    height: 68px;
+    left: 205px;
+    top: 145px;
+    padding:10px;
+    background: #0A2342;
+    border-radius: 29px;
+}

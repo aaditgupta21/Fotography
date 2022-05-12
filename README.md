@@ -114,7 +114,7 @@
     <tr>
         <td>Aadit</td>
         <td>Google Firebase Auth</td>
-        <td></td>
+        <td>https://github.com/aaditgupta21/koolskool/issues/14 ticket</td>
     </tr>
     <tr>
         <td>Rohit</td>

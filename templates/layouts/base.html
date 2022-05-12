@@ -1,17 +1,12 @@
-
 <html>
-
-
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/static/css/main.css" type="text/css">
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
-
-    </script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
     {% block meta %}{% endblock %}
+
 </head>
 
 
@@ -20,6 +15,7 @@
     <ul style="padding-left: 45px" class="nav navbar-nav">
         <li class="nav-item">
             <a style="font-size: 20px" class="nav-link" href={{ url_for('index') }}>  Home  </a>
+            <a style="font-size: 20px" class="nav-link" href={{ url_for('login') }}>  Login  </a>
         </li>
     </ul>
 
@@ -31,5 +27,26 @@
     {% block content %}{% endblock %}
 </div>
 </body>
+<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
 
+<!-- Add Firebase products that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-firestore.js"></script>
+
+<script>
+  const config = {
+    apiKey: "AIzaSyAhqcAXUs03vjIm2giztAFUioumovNP430",
+    authDomain: "koolskool.firebaseapp.com",
+    projectId: "koolskool",
+    storageBucket: "koolskool.appspot.com",
+    messagingSenderId: "410550935777",
+    appId: "1:410550935777:web:d93dacf384bb4f687f97a0",
+    measurementId: "G-T18S6HYQ59"
+  };
+  if (firebase.apps.length === 0) {
+    firebase.initializeApp(config);
+    console.log("worked");
+  }
+</script>
+<script src="static/js/auth.js"></script>
 </html>

@@ -25,13 +25,13 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
         <a class="nav-link" href="/">Guide</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/">Events</a>
+        <a class="nav-link" href={{ url_for('events')}}>Events</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/">Shop</a>
+        <a class="nav-link" href={{ url_for('shop')}}>Shop</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/">About Us</a>
+        <a class="nav-link" href={{ url_for('about')}}>About Us</a>
       </li>
     </ul>
   </div>

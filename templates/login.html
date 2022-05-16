@@ -1,0 +1,27 @@
+{% extends "layouts/base.html" %} {% block content %}
+
+<body>
+  <div class="container; center-block" style="color: crimson" <div class="row">
+    <h1 style="font-size: 70px">Login</h1>
+  </div>
+  <div style="color: indianred" <div class="row">
+    <h4 style="text-align: center">Login!</h4>
+  </div>
+
+  <div class="wrapper" style="z-index: 9999999999999">
+    <div id="formContent">
+      <button
+        class="btn btn-primary loginbtn"
+        type="submit"
+        id="loginbtn"
+        style="margin-bottom: 2vh"
+        onclick="googleauth();"
+      >
+        Login with Google
+      </button>
+    </div>
+    {% endblock %}
+  </div>
+</body>
+
+<script src="static/js/auth.js"></script>

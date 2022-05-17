@@ -16,13 +16,6 @@
         background-image: url("https://user-images.githubusercontent.com/45216311/167951445-f988c138-aff6-49a2-9ba7-ff2d4b1da493.png");
         background-size: 100%;
     }
-    h1,h2, buttonlearn{
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 50px;
-        color: #FFFFFF;
-    }
     buttonlearn{
         position: absolute;
         width: 290px;
@@ -39,11 +32,15 @@
     <title>About Us</title>
 </head>
 <body>
-<centerblock>
-    <h1 style="text-align: center">Speech and Debate</h1>
-    <h2 style="text-align: center">Del Norte High School</h2>
+    <div class="container position-absolute top-50 start-50 translate-middle-x ">
+        <div class="row d-flex text-center w-50 bg-dark text-white">
+            <h1>Speech and Debate</h1>
+            <h2>Del Norte High School</h2>
+        </div>
+
+    </div>
     <buttonlearn style="text-align: center">Learn More</buttonlearn>
-</centerblock>
+
 </body>
 </html>
 {% endblock %}

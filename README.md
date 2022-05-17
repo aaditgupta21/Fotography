@@ -3,7 +3,7 @@
 
 ## Project Credits
 
-### [Runtime Link]()
+### [Runtime Link](https://koolskool.aadit.dev)
 
 <table>
     <tr>

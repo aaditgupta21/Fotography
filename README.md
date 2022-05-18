@@ -118,7 +118,7 @@
     </tr>
     <tr>
         <td>Rohit</td>
-        <td></td>
+        <td>Navbar and additonal pages for the website</td>
         <td></td>
     </tr>
     <tr>

@@ -2,29 +2,10 @@
 {% block body %}
 <html lang="en">
 <style>
-    centerblock {
-        position: absolute;
-        width: 706px;
-        height: 233px;
-        left: 284px;
-        top: 149px;
 
-        background: linear-gradient(98.16deg, #7DACAF 0%, #FFF2C6 100%);
-        border-radius: 68px;
-    }
     body{
         background-image: url("https://user-images.githubusercontent.com/45216311/167951445-f988c138-aff6-49a2-9ba7-ff2d4b1da493.png");
         background-size: 100%;
-    }
-    buttonlearn{
-        position: absolute;
-        width: 290px;
-        height: 68px;
-        left: 210px;
-        top: 145px;
-
-        background: #0A2342;
-        border-radius: 29px;
     }
 </style>
 <head>
@@ -32,15 +13,13 @@
     <title>About Us</title>
 </head>
 <body>
-    <div class="container position-absolute top-50 start-50 translate-middle-x ">
-        <div class="row d-flex text-center w-50 bg-dark text-white">
+    <div class="container position-absolute top-50 start-50 translate-middle-x text-center ">
+        <div class="row d-flex text-center w-50 text-white mx-auto p-5 rounded-pill" style="background: linear-gradient(98.16deg, #7DACAF 0%, #FFF2C6 100%);">
             <h1>Speech and Debate</h1>
             <h2>Del Norte High School</h2>
+            <button type="button" class="btn btn-primary">Primary</button>
         </div>
-
     </div>
-    <buttonlearn style="text-align: center">Learn More</buttonlearn>
-
 </body>
 </html>
 {% endblock %}

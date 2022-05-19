@@ -1,27 +1,33 @@
-{% extends "layouts/base.html" %} {% block body %}
+<!DOCTYPE html>
 
-<body>
-  <div class="container; center-block" style="color: crimson" <div class="row">
-    <h1 style="font-size: 70px">Login</h1>
-  </div>
-  <div style="color: indianred" <div class="row">
-    <h4 style="text-align: center">Login!</h4>
-  </div>
+{% extends "layouts/base.html" %}
 
-  <div class="wrapper" style="z-index: 9999999999999">
-    <div id="formContent">
-      <button
-        class="btn btn-primary loginbtn"
-        type="submit"
-        id="loginbtn"
-        style="margin-bottom: 2vh"
-        onclick="googleauth();"
-      >
-        Login with Google
-      </button>
+{% block content %}
+
+    <div class="container py-4">
+        <header class="pb-3 mb-4 border-bottom border-primary text-dark">
+            <span class="fs-4">SQL CRUD Login Page</span>
+        </header>
     </div>
-    {% endblock %}
-  </div>
-</body>
 
-<script src="static/js/auth.js"></script>
+    <div class="container py-4 text-light bg-success">
+
+        <div class="container bg-secondary py-4">
+            <div class="p-5 mb-4 bg-light text-dark rounded-3">
+                <form method="POST" ID="login" action={{url_for('main_login')}}>
+                    <table>
+                        <tr><th><label for="email">Email</label></th></tr>
+                        <tr><td><input type="email" id='email' name="email" size="20" required></td></tr>
+                        <tr><th><label for="password">Password</label></th></tr>
+                        <tr><td><input type="password" id="password" name="password" size="20" required></td></tr>
+                        <tr><th><input type="submit" value="Submit"></th></tr>
+                        <tr><td><a href={{url_for('main_authorize')}}>Sign Up</a></td></tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+
+{% endblock %}

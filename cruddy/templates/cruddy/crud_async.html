@@ -15,7 +15,6 @@
             const name = document.getElementById("name").value;
             const email = document.getElementById("email").value;
             const password = document.getElementById("password").value;
-            const phone = document.getElementById("phone").value;
             const requestOptions = {
                 method: 'POST',
                 headers: {
@@ -24,7 +23,7 @@
                 },
             };
             //url for Create API
-            const url='/crud_api/create/' + name + '/' + email+ '/' + password + '/' + phone;
+            const url='/crud_api/create/' + name + '/' + email+ '/' + password ;
             //Asynch fetch API call to the database to create a new user
             fetch(url, requestOptions).then(response => {
                 // prepare HTML search result container for new output
@@ -78,7 +77,6 @@
                     document.getElementById("name").value="";
                     document.getElementById("email").value="";
                     document.getElementById("password").value="";
-                    document.getElementById("phone").value="";
                 })
             })
         }
@@ -259,7 +257,6 @@
                                 <th>Name</th>
                                 <th>Email</th>
                                 <th>Password</th>
-                                <th>Phone</th>
                             </tr>
                             </thead>
                             <tbody id="result">
@@ -269,7 +266,7 @@
                                 Prepare table for display
                                     caution: phone number needs "~" format step to force type to string
                                 -->
-                                {% set pn = "" ~ row['phone'] %}
+                                {% set pn = "" ~ row['password'] %}
                                 {% set pnf = "(" ~ pn[0:3] ~ ")" ~ pn[3:6] ~ "-" ~ pn[6:10] %}
                                 <tr>
                                     <td>{{ row['userID'] }}</td>
@@ -294,7 +291,6 @@
                     <th><label for="name">Name</label></th>
                     <th><label for="email">Email</label></th>
                     <th><label for="password">Password</label></th>
-                    <th><label for="phone">Phone</label></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -302,7 +298,6 @@
                     <td><input type="text" name="name" id="name" required></td>
                     <td><input type="email" name="email" id="email" placeholder="abc@xyz.org" required></td>
                     <td><input type="password" name="password" id="password" required></td>
-                    <td><input type="tel" name="phone" id="phone" pattern="[0-9]{10}" placeholder="1234567890" required></td>
                     <td ><button onclick="create_User()">Create</button></td>
 
                 </tr>

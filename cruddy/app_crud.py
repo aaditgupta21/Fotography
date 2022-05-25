@@ -1,8 +1,9 @@
 """control dependencies to support CRUD app routes and APIs"""
 from flask import Blueprint, render_template, request, url_for, redirect, jsonify, make_response
-from flask_login import login_required
+from flask_login import login_required, logout_user
 from cruddy.query import Users, users_all, user_by_id, users_ilike
-
+from cruddy.query import *
+from cruddy.model import Users
 # blueprint defaults https://flask.palletsprojects.com/en/2.0.x/api/#blueprint-objects
 app_crud = Blueprint('crud', __name__,
                      url_prefix='/crud',
@@ -34,7 +35,6 @@ def create():
             request.form.get("name"),
             request.form.get("email"),
             request.form.get("password"),
-            request.form.get("phone")
         )
         po.create()
     return redirect(url_for('crud.crud'))
@@ -83,6 +83,12 @@ def delete():
 def search():
     """loads form to search Users data"""
     return render_template("search.html")
+
+@app_crud.route('/logout/', methods=["GET", "POST"])
+# logout and redirect to crud page (unauthorized so will actually display login)
+def crud_logout():
+    logout_user()
+    return redirect(url_for('crud.crud'))
 
 
 # Search request and response

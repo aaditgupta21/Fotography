@@ -27,24 +27,3 @@ def user_by_email(email):
     """finds User in table matching email """
     return Users.query.filter_by(email=email).first()
 
-
-if __name__ == "__main__":
-
-    # Look at table
-    print("Print all")
-    for user in users_all():
-        print(user)
-    print()
-
-    # Look at table
-    print("Print ilike example.com")
-    for user in users_ilike("example.com"):
-        print(user)
-    print()
-
-    print("Print userID 2")
-    print(user_by_id(2).read())
-
-    print("Print userID tedison@example.com")
-    print(user_by_email("tedison@example.com").read())
-

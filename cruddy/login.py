@@ -45,7 +45,7 @@ def authorize(name, email, password):
             name=name,
             email=email,
             password=password,
-            phone="1234567890"  # this should be added to authorize.html
+             # this should be added to authorize.html
         )
         # encrypt their password and add it to the auth_user object
         auth_user.create()
@@ -56,13 +56,4 @@ def authorize(name, email, password):
 def logout():
     logout_user()  # removes login state of user from session
 
-
-# Test some queries from implementations above
-if __name__ == "__main__":
-
-    # Look at table
-    print("Print all at start")
-    for user in users_all():
-        print(user)
-    print()
 

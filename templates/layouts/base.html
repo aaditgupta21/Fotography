@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-{% set basename = "Kool Skool" %}
+{% set basename = "KoolSkool" %}
 <!--{% set github = "https://github.com/nighthawkcoders" %}-->
 <!--{% set twitter = "https://twitter.com/NighthawkCoding" %}-->
 <!--{% set youtube = "https://www.youtube.com/channel/UClIKOsDS5dsfzFA3zveDT3Q?view_as=subscriber" %}-->
@@ -28,7 +28,7 @@
           crossorigin="anonymous"
     >
 
-    <title>{{ basename }} | {{ project }}</title>
+    <title>{{ basename }} | {{ pageTitle }}</title>
 
     {% block colors %}
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='SCSS/base_design.css', version= '48') }}">
@@ -36,7 +36,7 @@
 
 
 </head>
-    
+
 <style>
 
     body {

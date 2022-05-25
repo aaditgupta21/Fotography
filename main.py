@@ -89,6 +89,10 @@ def calendar():
 def events():
     return render_template("events.html")
 
+@app.route('/activity')
+def activity():
+    return render_template("activity.html")
+
 @app.route('/shop')
 def shop():
     return render_template("shop.html")

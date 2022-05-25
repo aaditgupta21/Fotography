@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% extends "layouts/base.html" %}
+{% block content %}
+
+    <body>
+
+    <div id="part1">
+        <h1>Team Bonding Warm Up</h1>
+      <h3>Enter the event for the person listed</h3>
+    </div>
+    <div id="part2">
+        <p id="Question">Type the event of <span id="randpers"></span>!</p>
+        <input type="text" id="person_input" value="">
+
+        <button id="enter" onclick="persFxn(document.getElementById('person_input').value)">Enter</button>
+        <p id="display"></p>
+        <p id="display2"></p>
+
+        <button id="Again" onclick="reset();">Play Again</button>
+
+    </div>
+    <script>
+
+//inspired by my create task
+        let list_main = [
+            {
+                name: 'Gaurish Gaur',
+                event: 'parli',
+
+            },
+            {
+                name: 'Arjun Suri',
+                event: 'pf',
+
+            },
+            {
+                name: 'Sara Beniwal',
+                event: 'speech',
+
+            },
+            {
+                name: 'Karthik Valluri',
+                event: 'ld',
+
+            },
+            {
+                name: 'Kevin',
+                event: 'policy',
+
+            },
+            {
+                name: 'Jonathan Lee',
+                event: 'pf',
+
+            },
+
+        ];
+
+
+        let length = list_main.length;
+        let rnum;
+        let randpers;
+
+        createrandom(length);
+        function createrandom(length){
+            rnum = Math.floor(Math.random() * length);
+            randpers = list_main[rnum].name;
+            document.getElementById("randpers").innerHTML = randpers;
+
+        }
+
+        var points = 0 ;
+        let count = 0 ;
+        function persFxn(input) {
+            count = count + 1;
+
+
+            if (input == list_main[rnum].event) {
+                message = "Good job, You Receive a Point!";
+                points = points + 1;
+                tpoints = points;
+
+                if(tpoints == 3){
+                    message = "Great job! :) You have won the game!";
+                }
+            }
+
+            else {
+                message = "Sorry, Please Try Again! You have lost a point.";
+                points = points - 1;
+                tpoints=points;
+
+            }
+
+
+
+            document.getElementById("display").innerHTML = "Your Score --> " + tpoints;
+            document.getElementById("display2").innerHTML =   message ;
+
+
+
+        }
+
+
+        function reset(){
+            document.getElementById("display2").innerHTML = "";
+            createrandom(length);
+        }
+    </script>
+
+
+    </body>
+{% endblock %}

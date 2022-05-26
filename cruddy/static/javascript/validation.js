@@ -16,11 +16,11 @@ function verifyPassword(event) {
         event.preventDefault();
         //prevents submission of form when password length is not valid.
     }
-    if (usr = "test@test.com" && psw = "test123") {
-        window.location.pathname = "/crudAdmin/"
+    /* if !(usr = "test@test.com" && psw = "test123") {
+        window.location.pathname = "/crud/crudview/"
 
     }
-
+    */
 }
 
 

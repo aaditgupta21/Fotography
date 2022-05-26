@@ -64,14 +64,16 @@ class Users(UserMixin, db.Model):
     name = db.Column(db.String(255), unique=False, nullable=False)
     email = db.Column(db.String(255), unique=True, nullable=False)
     password = db.Column(db.String(255), unique=False, nullable=False)
+    phone = db.Column(db.String(255), unique=False, nullable=False)
     # Defines a relationship between User record and Notes table, one-to-many (one user to many notes)
     notes = db.relationship("Notes", cascade='all, delete', backref='users', lazy=True)
 
     # constructor of a User object, initializes of instance variables within object
-    def __init__(self, name, email, password):
+    def __init__(self, name, email, password, phone):
         self.name = name
         self.email = email
         self.set_password(password)
+        self.phone = phone
 
     # returns a string representation of object, similar to java toString()
     def __repr__(self):
@@ -97,6 +99,7 @@ class Users(UserMixin, db.Model):
             "name": self.name,
             "email": self.email,
             "password": self.password,
+            "phone": self.phone,
             "query": "by_alc"  # This is for fun, a little watermark
         }
 
@@ -108,6 +111,8 @@ class Users(UserMixin, db.Model):
             self.name = name
         if len(password) > 0:
             self.set_password(password)
+        if len(phone) > 0:
+            self.phone = phone
         db.session.commit()
         return self
 
@@ -170,4 +175,32 @@ def model_builder():
             print(f"Records exist, duplicate email, or error: {row.email}")
 
 
+# Looks into database
+def model_driver():
+    print("---------------------------")
+    print("Create Tables and Seed Data")
+    print("---------------------------")
+    model_builder()
 
+    print("---------------------------")
+    print("Table: " + Users.__tablename__)
+    print("Columns: ", Users.__table__.columns.keys())
+    print("---------------------------")
+    print("Table: " + Notes.__tablename__)
+    print("Columns: ", Notes.__table__.columns.keys())
+    print("---------------------------")
+    print()
+
+    users = Users.query
+    for user in users:
+        print("User" + "-" * 81)
+        print(user.read())
+        print("Notes" + "-" * 80)
+        for note in user.notes:
+            print(note.read())
+        print("-" * 85)
+        print()
+
+
+if __name__ == "__main__":
+    model_driver()

@@ -25,6 +25,10 @@ def crud():
     """obtains all Users from table and loads Admin Form"""
     return render_template("crud.html", table=users_all())
 
+@app_crud.route('/crudview/')
+def crud_view():
+    """obtains all Users from table and loads Admin Form"""
+    return render_template("crudview.html", table=users_all())
 
 # CRUD create/add
 @app_crud.route('/create/', methods=["POST"])
@@ -35,6 +39,7 @@ def create():
             request.form.get("name"),
             request.form.get("email"),
             request.form.get("password"),
+            request.form.get("phone")
         )
         po.create()
     return redirect(url_for('crud.crud'))
@@ -83,6 +88,7 @@ def delete():
 def search():
     """loads form to search Users data"""
     return render_template("search.html")
+
 
 @app_crud.route('/logout/', methods=["GET", "POST"])
 # logout and redirect to crud page (unauthorized so will actually display login)

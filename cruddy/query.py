@@ -26,4 +26,3 @@ def user_by_id(userid):
 def user_by_email(email):
     """finds User in table matching email """
     return Users.query.filter_by(email=email).first()
-

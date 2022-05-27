@@ -7,14 +7,10 @@
     <style>
         .popup .content {
             position: absolute;
+            left: 50%;
             top: 50%;
-            right: 30%;
-            transform: translate(-50%,-150%) scale(0);
-            width: 500px;
-            height: 500px;
-            z-index: 10;
-            text-align: center;
-            padding: 30px;
+            transform: translate(-50%, -50%);
+            padding: 10px;
 
         }
 
@@ -26,12 +22,14 @@
             height: 30px;
             color: #ff0000;
             font-size: 50px;
-        {#background: #292929;#}
         }
+        .popup .close-btn:hover {
+            color: #7e0303;
 
+        }
         .popup.active .content {
-            transition: all 1000ms ease-in-out;
-            transform: translate(-70%,-70%) scale(1);
+            transition: all 10ms ease-in-out;
+            transform: translate(-1000%,-1000%) scale(1);
         }
 
         h1 {
@@ -94,7 +92,7 @@
 
     <div class="popup" id="popup-1">
         <div class="content">
-            <div class="close-btn" onclick="togglePopup()">
+            <div class="close-btn" onclick="statpop()">
                 ×</div>
 
             <div class="container py-4">
@@ -110,9 +108,9 @@
                         <form method="POST" ID="login" action={{url_for('main_login')}}>
                             <table>
                                 <tr><th><label for="email">Email</label></th></tr>
-                                <tr><td><input type="email" id='email' name="email" size="35" required></td></tr>
+                                <tr><td><input placeholder="Email" type="email" id='email' name="email" size="35" required></td></tr>
                                 <tr><th><label for="password">Password</label></th></tr>
-                                <tr><td><input type="password" id="password" name="password" size="35" required></td></tr>
+                                <tr><td><input placeholder="Password" type="password" id="password" name="password" size="35" required></td></tr>
                                 <tr><th><input type="submit" value="Submit"></th></tr>
                                 <tr><td><a href={{url_for('main_authorize')}}>Sign Up</a></td></tr>
                             </table>

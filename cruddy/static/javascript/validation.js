@@ -9,15 +9,18 @@ function verifyPassword(event) {
     As a variable, it could be called anything - but it makes more sense to call it event rather than banana... etc.
     Name your variables well, my friends.
     */
-
+    const usr =  document.getElementById("email").value;
     const psw =  document.getElementById("password").value;
-
     if (psw.length < 6 || psw.length > 20) {
         document.getElementById("pswError").innerHTML = "Password must be between 6 and 20 characters";
         event.preventDefault();
         //prevents submission of form when password length is not valid.
     }
+    /* if !(usr = "test@test.com" && psw = "test123") {
+        window.location.pathname = "/crud/crudview/"
 
+    }
+    */
 }
 
 

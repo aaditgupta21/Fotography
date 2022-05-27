@@ -55,14 +55,3 @@ def authorize(name, email, password):
 # logout user
 def logout():
     logout_user()  # removes login state of user from session
-
-
-# Test some queries from implementations above
-if __name__ == "__main__":
-
-    # Look at table
-    print("Print all at start")
-    for user in users_all():
-        print(user)
-    print()
-

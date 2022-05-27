@@ -32,8 +32,8 @@ def crud_api():
 class UsersAPI:
     # class for create/post
     class _Create(Resource):
-        def post(self, name, email, password, phone):
-            po = Users(name, email, password, phone)
+        def post(self, name, email, password):
+            po = Users(name, email, password)
             person = po.create()
             if person:
                 return person.read()

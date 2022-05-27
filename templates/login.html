@@ -22,12 +22,14 @@
             height: 30px;
             color: #ff0000;
             font-size: 50px;
-        {#background: #292929;#}
         }
+        .popup .close-btn:hover {
+            color: #7e0303;
 
+        }
         .popup.active .content {
-            transition: all 1000ms ease-in-out;
-            transform: translate(-70%,-70%) scale(1);
+            transition: all 10ms ease-in-out;
+            transform: translate(-1000%,-1000%) scale(1);
         }
 
         h1 {
@@ -90,7 +92,7 @@
 
     <div class="popup" id="popup-1">
         <div class="content">
-            <div class="close-btn" onclick="togglePopup()">
+            <div class="close-btn" onclick="statpop()">
                 ×</div>
 
             <div class="container py-4">

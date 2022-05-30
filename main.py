@@ -86,6 +86,10 @@ def events():
 def activity():
     return render_template("activity.html")
 
+@app.route('/learning')
+def learning():
+    return render_template("learning.html")
+
 @app.route('/shop')
 def shop():
     return render_template("shop.html")

@@ -1,6 +1,6 @@
 """control dependencies to support CRUD app routes and APIs"""
 from flask import Blueprint, render_template, request, url_for, redirect, jsonify, make_response
-from flask_login import login_required, logout_user
+from flask_login import login_required, logout_user, current_user
 from cruddy.query import Users, users_all, user_by_id, users_ilike
 from cruddy.query import *
 from cruddy.model import Users
@@ -23,9 +23,15 @@ app_crud = Blueprint('crud', __name__,
 @login_required  # Flask-Login uses this decorator to restrict acess to logged in users
 def crud():
     """obtains all Users from table and loads Admin Form"""
-    return render_template("crud.html", table=users_all())
+    id = current_user.get_id()
+    if id != 1:
+        return redirect(url_for('crud.crud_view'))
+    else:
+        return render_template("crud.html", table=users_all())
+
 
 @app_crud.route('/crudview/')
+@login_required
 def crud_view():
     """obtains all Users from table and loads Admin Form"""
     return render_template("crudview.html", table=users_all())

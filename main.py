@@ -35,7 +35,7 @@ def main_login():
         email = request.form.get("email")
         password = request.form.get("password")
         if login(email, password):
-            if (email == "test@test.com") and (password == "test123"):
+            if (email == "test@test.com") and (password == "test123"): # this can be replaced with whatever login is needed
                 return redirect(url_for('crud.crud'))
             else:
                 return redirect(url_for('crud.crud_view'))

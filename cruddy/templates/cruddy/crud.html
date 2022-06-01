@@ -44,6 +44,7 @@
                             <th>Name</th>
                             <th>Email</th>
                             <th>Password</th>
+                            <th>Orders</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -53,13 +54,14 @@
                         Prepare table for display
                             caution: phone number needs "~" format step to force type to string
                         -->
-                        {% set pn = "" ~ row['password'] %}
+                        {% set pn = "" ~ row['orders'] %}
                         {% set pnf = "(" ~ pn[0:3] ~ ")" ~ pn[3:6] ~ "-" ~ pn[6:10] %}
                         <tr>
                             <td>{{ row['userID'] }}</td>
                             <td>{{ row['name'] }}</td>
                             <td>{{ row['email'] }}</td>
                             <td>{{ row['password'] | truncate(20) }}</td>
+                            <td><a href="{{ url_for('notes.notes_select', userID=row['userID']) }}">{{ row['notes'] | length }}</a></td>
                             <td>{{ pnf }}</td>
                         </tr>
                         {% endfor %}

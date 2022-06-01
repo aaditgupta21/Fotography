@@ -16,7 +16,6 @@ from notey.app_notes import app_notes
 app.register_blueprint(app_crud)
 app.register_blueprint(app_crud_api)
 app.register_blueprint(app_notes)
-#-------------------------------------
 
 
 # create a Flask instance
@@ -43,12 +42,10 @@ def main_login():
         email = request.form.get("email")
         password = request.form.get("password")
         if login(email, password):
-            try:  # try to redirect to next page
-                next_page = app.config['NEXT_PAGE']
-                app.config['NEXT_PAGE'] = None
-                return redirect(url_for(next_page))
-            except:  # any failure goes to home page
-                return redirect(url_for('index'))
+            if (email == "test@test.com") and (password == "test123"): # this can be replaced with whatever login is needed
+                return redirect(url_for('crud.crud'))
+            else:
+                return redirect(url_for('crud.crud_view'))
     # if not logged in, show the login page
     return render_template("login.html")
 

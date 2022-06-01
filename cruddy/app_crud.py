@@ -36,6 +36,7 @@ def crud_view():
     """obtains all Users from table and loads Admin Form"""
     return render_template("crudview.html", table=users_all())
 
+
 # CRUD create/add
 @app_crud.route('/create/', methods=["POST"])
 def create():

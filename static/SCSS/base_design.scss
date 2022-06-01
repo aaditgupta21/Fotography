@@ -43,17 +43,19 @@ $theme-colors: (
 */
 
 // redefine colors
-$primary: #ffb703;
+$primary: #7DACAF;
+$secondary: #FFF2C6;
 $header-bg: #023047;
 $subtext: #8ecae6;
 $button: #023047 ;
 $btn_hov: #71c4ce;
-$body-bg: #cfd8dc;
+$body-bg: #FEFFEA;
 $table-bg: #f8f9fa;
 $table-txt: black;
 
 $theme-colors: (
         "primary": $primary,
+        "secondary": $secondary,
         "header-bg": $header-bg,
         "button": $button,
         "subtext": $subtext,
@@ -95,21 +97,4 @@ html, body {
           "table-bg": $table-bg,
           "table-txt": $table-txt
   );
-
-
-
-  /* set background values */
-  --#{$variable-prefix}body-bg: #{$body-bg};
-
-  /* redefine theme color variables */
-  @each $color, $value in $theme-colors {
-    --#{$variable-prefix}#{$color}: #{$value};
-  }
-  /* redefine theme theme-colors-rgb variables */
-  $theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
-  @each $color, $value in $theme-colors-rgb {
-    --#{$variable-prefix}#{$color}-rgb: #{$value};
-  }
-
-  @import "../../node_modules/bootstrap/scss/bootstrap";
 }

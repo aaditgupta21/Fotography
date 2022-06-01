@@ -1,6 +1,39 @@
 <!-- Navigation Bar from bootstrap
 This HTML is setup as a fragment allowing it to be "included" by other HTML files via Jinja2
 -->
+<style>
+  .popup .content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    z-index:500;
+
+  }
+
+  .popup .close-btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    color: #ff0000;
+    font-size: 50px;
+    cursor: pointer;
+  }
+  .popup .close-btn:hover {
+    color: #7e0303;
+
+  }
+  .popup.active .content {
+    transition: all 10ms ease-in-out;
+    transform: translate(-1000%,-1000%) scale(1);
+  }
+
+
+</style>
+
 <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #7DACAE;">
   <a style="font-weight: bold; font-size: 25px;" class="navbar-brand" href="/">{{ basename }}</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,8 +62,50 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
     </ul>
     <ul class="navbar-nav" style="margin-left: auto ">
       <li class="nav-item">
-        <a style="color: white; font-weight: bold; font-size: 20px;" class="nav-link" href={{ url_for('main_login')}}>Login</a>
+        <button onclick="statpop()" style="border-radius: 12px; padding:5px 24px; background-color:#023047; color:whitesmoke; margin-right:25px;">LOGIN</button>
       </li>
     </ul>
   </div>
 </nav>
+
+<div class="popup" id="popup-1" >
+  <div class="content">
+    <div class="close-btn" onclick="statpop()">
+      ×</div>
+
+    <div class="container py-4">
+      <header class="pb-3 mb-4 border-bottom border-primary text-dark">
+        <span class="fs-4">SQL CRUD Login Page</span>
+      </header>
+    </div>
+
+    <div class="container py-4 text-light bg-primary">
+
+      <div class="container bg-secondary py-4">
+        <div class="p-5 mb-4 bg-light text-dark rounded-3">
+          <form method="POST" ID="login" action={{url_for('main_login')}}>
+            <table>
+              <tr><th><label for="email">Email</label></th></tr>
+              <tr><td><input placeholder="Email" type="email" id='email' name="email" size="35" required></td></tr>
+              <tr><th><label for="password">Password</label></th></tr>
+              <tr><td><input placeholder="Password" type="password" id="password" name="password" size="35" required></td></tr>
+              <tr><th><input type="submit" value="Submit"></th></tr>
+              <tr><td><a href={{url_for('main_authorize')}}>Sign Up</a></td></tr>
+            </table>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<script>
+  document.getElementById("popup-1")
+          .classList.toggle("active");
+  function statpop() {
+    document.getElementById("popup-1")
+            .classList.toggle("active");
+  }
+</script>

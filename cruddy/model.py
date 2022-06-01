@@ -96,6 +96,56 @@ class Notes(db.Model):
         db.session.commit()
         return None
 
+class Events(db.Model):
+    __tablename__ = 'events'
+
+    # Define the Notes schema
+    id = db.Column(db.Integer, primary_key=True)
+    date = db.Column(db.Text, unique=False, nullable=False)
+    tournament=db.Column(db.Text, unique=False, nullable=False)
+    location = db.Column(db.Text, unique=False, nullable=False)
+    registration = db.Column(db.Text, unique=False, nullable=False)
+    # Define a relationship in Notes Schema to userID who originates the note, many-to-one (many notes to one user)
+
+    # Constructor of a Notes object, initializes of instance variables within object
+    def __init__(self, date, tournament, location, registration):
+        self.date = date
+        self.tournament = tournament
+        self.location = location
+        self.registration = registration
+
+    # Returns a string representation of the Notes object, similar to java toString()
+    # returns string
+    def __repr__(self):
+        return "Events(" + str(self.id) + "," + self.date + "," + self.tournament + "," + self.location + "," + self.registration + ")"
+
+    # CRUD create, adds a new record to the Notes table
+    # returns the object added or None in case of an error
+    def create(self):
+        try:
+            # creates a Notes object from Notes(db.Model) class, passes initializers
+            db.session.add(self)  # add prepares to persist person object to Notes table
+            db.session.commit()  # SqlAlchemy "unit of work pattern" requires a manual commit
+            return self
+        except IntegrityError:
+            db.session.remove()
+            return None
+
+    # CRUD read, returns dictionary representation of Notes object
+    # returns dictionary
+    def read(self):
+        return {
+            "id": self.id,
+            "date": self.date,
+            "tournament": self.tournament,
+            "location": self.location,
+            "registration": self.registration
+        }
+
+    def delete(self):
+        db.session.delete(self)
+        db.session.commit()
+        return None
 
 # Define the Users table within the model
 # -- Object Relational Mapping (ORM) is the key concept of SQLAlchemy

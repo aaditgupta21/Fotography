@@ -12,10 +12,10 @@
       <h3>Enter the event for the person listed</h3>
     </div>
     <div id="part2">
-        <p id="Question">Type the event of <span id="randpers"></span>!</p>
+        <p id="Question">Type the <span id="randprompt"></span> of <span id="randpers"></span>!</p>
         <input type="text" id="person_input" value="">
 
-        <button id="enter" onclick="persFxn(document.getElementById('person_input').value)">Enter</button>
+        <button id="enter" onclick="persFxn()">Enter</button>
         <p id="display"></p>
         <p id="display2"></p>
 
@@ -29,31 +29,43 @@
             {
                 name: 'Gaurish Gaur',
                 event: 'parli',
+                eventformal: 'parlimentary',
+                color: 'blue',
 
             },
             {
                 name: 'Arjun Suri',
                 event: 'pf',
+                eventformal: 'public forum',
+                color: 'red',
 
             },
             {
                 name: 'Sara Beniwal',
                 event: 'speech',
+                color: 'green',
 
             },
             {
                 name: 'Karthik Valluri',
                 event: 'ld',
+                eventformal: 'lincoln douglas',
+                color: 'yellow',
+
 
             },
             {
                 name: 'Kevin',
                 event: 'policy',
+                color: 'orange',
 
             },
             {
                 name: 'Jonathan Lee',
                 event: 'pf',
+                eventformal: 'public forum',
+                color: 'blue',
+
 
             },
 
@@ -63,6 +75,7 @@
         let length = list_main.length;
         let rnum;
         let randpers;
+        let randprompt;
 
         createrandom(length);
         function createrandom(length){
@@ -72,28 +85,69 @@
 
         }
 
+        createprompt();
+        function createprompt(){
+            dual = Math.floor(Math.random() * 2 );
+
+            if (dual==0){
+                randprompt="main event"
+            }
+            if (dual==1){
+                randprompt="favorite color"
+            }
+            document.getElementById("randprompt").innerHTML = randprompt;
+
+}
+
         var points = 0 ;
         let count = 0 ;
-        function persFxn(input) {
+        function persFxn() {
             count = count + 1;
 
-
-            if (input == list_main[rnum].event) {
+            let input = document.getElementById('person_input').value
+            let modinput= input.toLowerCase();
+            if (dual==0) {
+                if (modinput == list_main[rnum].event||modinput == list_main[rnum].eventformal){
                 message = "Good job, You Receive a Point!";
                 points = points + 1;
                 tpoints = points;
 
-                if(tpoints == 3){
-                    message = "Great job! :) You have won the game!";
+            }
+
+                else {
+                    message = "Sorry, Please Try Again! You have lost a point.";
+                    points = points - 1;
+                    tpoints=points;
+
                 }
-            }
 
-            else {
-                message = "Sorry, Please Try Again! You have lost a point.";
-                points = points - 1;
-                tpoints=points;
 
             }
+
+            if (dual==1) {
+                if (modinput == list_main[rnum].color){
+                    message = "Good job, You Receive a Point!";
+                    points = points + 1;
+                    tpoints = points;
+
+                }
+
+                else {
+                    message = "Sorry, Please Try Again! You have lost a point.";
+                    points = points - 1;
+                    tpoints=points;
+
+                }
+
+
+            }
+
+            if (tpoints>=5) {
+                message= "Wow you are amazing at this!"
+
+                }
+
+
 
 
 
@@ -108,6 +162,7 @@
         function reset(){
             document.getElementById("display2").innerHTML = "";
             createrandom(length);
+            createprompt();
         }
     </script>
 

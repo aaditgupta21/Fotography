@@ -20,14 +20,14 @@ class Notes(db.Model):
     userID = db.Column(db.Integer, db.ForeignKey('users.userID'))
 
     # Constructor of a Notes object, initializes of instance variables within object
-    def __init__(self, note, userID):
+    def __init__(self, userID, note ):
         self.note = note
         self.userID = userID
 
     # Returns a string representation of the Notes object, similar to java toString()
     # returns string
     def __repr__(self):
-        return "Notes(" + str(self.id) + "," + self.note + "," + str(self.userID) + ")"
+        return "Notes(" + str(self.id) + "," + self.note + ")"
 
     # CRUD create, adds a new record to the Notes table
     # returns the object added or None in case of an error
@@ -49,6 +49,11 @@ class Notes(db.Model):
             "note": self.note,
             "userID": self.userID
         }
+
+    def delete(self):
+        db.session.delete(self)
+        db.session.commit()
+        return None
 
 
 # Define the Users table within the model

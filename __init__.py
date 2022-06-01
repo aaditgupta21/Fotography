@@ -21,4 +21,7 @@ Migrate(app, db)
 # Setup LoginManager object (app)
 login_manager = LoginManager()
 login_manager.init_app(app)
-next_page = None
+
+# Setup custom application variables
+app.config['NEXT_PAGE'] = None  # next page on login attempt
+app.config['MAX_CONTENT_LENGTH'] = 5 * 1024 * 1024  # maximum size of uploaded content

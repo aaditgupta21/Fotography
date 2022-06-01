@@ -2,16 +2,23 @@
 import json
 
 # import app as app
-from flask import render_template, redirect, request, url_for
+from flask import render_template, redirect, request, url_for, send_from_directory
 from flask_login import login_required
 
 from __init__ import app, login_manager
 from cruddy.app_crud import app_crud
 from cruddy.app_crud_api import app_crud_api
 from cruddy.login import login, logout, authorize
+# from uploady.app_upload import app_upload
+from notey.app_notes import app_notes
 
+# app.register_blueprint(app_upload)
 app.register_blueprint(app_crud)
 app.register_blueprint(app_crud_api)
+app.register_blueprint(app_notes)
+#-------------------------------------
+
+
 # create a Flask instance
 # connects default URL to render index.html
 
@@ -24,6 +31,7 @@ def main_logout():
 @login_manager.unauthorized_handler
 def unauthorized():
     """Redirect unauthorized users to Login page."""
+    app.config['NEXT_PAGE'] = request.endpoint
     return redirect(url_for('main_login'))
 
 
@@ -35,10 +43,12 @@ def main_login():
         email = request.form.get("email")
         password = request.form.get("password")
         if login(email, password):
-            if (email == "test@test.com") and (password == "test123"): # this can be replaced with whatever login is needed
-                return redirect(url_for('crud.crud'))
-            else:
-                return redirect(url_for('crud.crud_view'))
+            try:  # try to redirect to next page
+                next_page = app.config['NEXT_PAGE']
+                app.config['NEXT_PAGE'] = None
+                return redirect(url_for(next_page))
+            except:  # any failure goes to home page
+                return redirect(url_for('index'))
     # if not logged in, show the login page
     return render_template("login.html")
 
@@ -85,10 +95,6 @@ def events():
 @app.route('/activity')
 def activity():
     return render_template("activity.html")
-
-@app.route('/learning')
-def learning():
-    return render_template("learning.html")
 
 @app.route('/shop')
 def shop():

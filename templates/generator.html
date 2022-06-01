@@ -1,0 +1,51 @@
+{% set pageTitle = "Generator" %}
+
+{% extends "layouts/base.html" %}
+{% block content %}
+
+
+<h1 style="text-align: center;">Random Debate Category Generator</h1>
+
+
+
+<form style="font-weight: bold; text-align: center; font-size: 50px;" name="WordForm">
+    <input type=text name="WordBox" id="wordbox"><BR>
+    <input type=button value="Generate" onClick="PickRandomWord(document.WordForm);" id="button">
+</form>
+
+<script>
+
+    var NumberOfWords = 6
+
+    var words = new BuildArray(NumberOfWords)
+
+    // Use the following variables to
+    // define your random words:
+    words[1] = "Parli"
+    words[2] = "Public Forum"
+    words[3] = "Speech"
+    words[4] = "Lincoln Douglas"
+    words[5] = "Policy"
+    words[6] = "Congress"
+
+    function BuildArray(size){
+        this.length = size
+        for (var i = 1; i <= size; i++){
+            this[i] = null}
+        return this
+    }
+
+    function PickRandomWord(frm) {
+    // Generate a random number between 1 and NumberOfWords
+        var rnd = Math.ceil(Math.random() * NumberOfWords)
+
+    // Display the word inside the text box
+        frm.WordBox.value = words[rnd]
+    }
+
+
+
+</script>
+
+
+{% endblock %}

@@ -24,7 +24,9 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
       <li class="nav-item">
         <a style="color: white; font-weight: bold; font-size: 20px;" class="nav-link" href={{ url_for('activity')}}>Team Bonding</a>
       </li>
-
+      <li>
+          <a style="color: white; font-weight: bold; font-size: 20px;" class="nav-link" href={{url_for('notes.notes')}}>Notes</a>
+      </li>
 
     </ul>
     <ul class="navbar-nav" style="margin-left: auto ">
@@ -33,19 +35,4 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
       </li>
     </ul>
   </div>
-    <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
-        <ul class="navbar-nav">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Data
-                </a>
-                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                    <li><a class="dropdown-item" href={{url_for('notes.notes')}}>SQL Notes</a></li>
-                    <li><a class="dropdown-item" href={{url_for('crud.crud')}}>SQL CRUD</a></li>
-{#                    <li><a class="dropdown-item" href={{url_for('crud_api.crud_api')}}>SQL CRUD Async</a></li>#}
-{#                    <li><a class="dropdown-item" href={{url_for('crud.search')}}>SQL Search</a></li>#}
-                </ul>
-            </li>
-        </ul>
-    </div>
 </nav>

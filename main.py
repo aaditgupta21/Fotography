@@ -11,11 +11,13 @@ from cruddy.app_crud_api import app_crud_api
 from cruddy.login import login, logout, authorize
 # from uploady.app_upload import app_upload
 from notey.app_notes import app_notes
+from events.app_events import app_events
 
 # app.register_blueprint(app_upload)
 app.register_blueprint(app_crud)
 app.register_blueprint(app_crud_api)
 app.register_blueprint(app_notes)
+app.register_blueprint(app_events)
 
 
 # create a Flask instance
@@ -84,10 +86,6 @@ def about():
 def calendar():
     return render_template("calendar.html")
 
-
-@app.route('/events')
-def events():
-    return render_template("events.html")
 
 @app.route('/activity')
 def activity():

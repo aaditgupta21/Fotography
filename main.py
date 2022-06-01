@@ -91,6 +91,10 @@ def calendar():
 def activity():
     return render_template("activity.html")
 
+@app.route('/generator')
+def generator():
+    return render_template("generator.html")
+
 @app.route('/shop')
 def shop():
     return render_template("shop.html")

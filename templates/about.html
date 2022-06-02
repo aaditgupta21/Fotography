@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
     <body>
+        <!--   Carousel Code     -->
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -14,17 +15,21 @@
                 <button type="button" data-bs-target="#carous elExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner">
-                <div class="carousel-item active" style="height:400px; overflow:hidden;">
-                    <img style="width: 100%; transform:translateY(-30%); " src="{{ url_for('static', filename='assets/aboutus1.jpg') }}">
+                <div class="carousel-item active" style="height:600px; overflow:hidden;">
+                    <img style="width: 100%; transform:translateY(-30%); filter:brightness(50%)" src="{{ url_for('static', filename='assets/aboutus1.jpg') }}">
                 </div>
-                <div class="carousel-item" style="height:400px; overflow:hidden;">
-                    <img style="width: 100%; transform:translateY(-15%); " src="{{ url_for('static', filename='assets/aboutus2.jpg') }}">
+                <div class="carousel-item" style="height:600px; overflow:hidden;">
+                    <img style="width: 100%; transform:translateY(-15%); filter:brightness(50%) " src="{{ url_for('static', filename='assets/aboutus2.jpg') }}">
 
                 </div>
-                <div class="carousel-item" style="height:400px; overflow:hidden;">
-                    <img style="width: 100%; transform:translateY(-20%); " src="{{ url_for('static', filename='assets/aboutus3.jpg') }}">
+                <div class="carousel-item" style="height:600px; overflow:hidden;">
+                    <img style="width: 100%; transform:translateY(-20%); filter:brightness(50%) " src="{{ url_for('static', filename='assets/aboutus3.jpg') }}">
 
                 </div>
+            </div>
+            <div class="carousel-caption d-none d-md-block">
+                <h1 class="display-1">Speech & Debate</h1>
+                <p>You Talk. You Win.</p>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -35,10 +40,46 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
+
+        <!--   Centered Hero text blurb    -->
         <div class="px-4 py-5 my-5 text-center bg-black text-white">
             <h1 class=" fw-bold">About Us</h1>
             <div class="col-lg-6 mx-auto">
                 <p class="lead mb-4">Here at speech and debate, we believe in inspiring America's students to be better speakers and debaters. We strive to inspire students to find issues they're passionate about and give them a space to express/assert their ideas</p>
+            </div>
+        </div>
+
+        <!--   Leadership Team Breakdown     -->
+        <div class="container p-5">
+            <div class="justify-content-center">
+                <h1 class="display-1 text-center">Our Leadership Team</h1>
+            </div>
+
+            <br>
+            <br>
+            <br>
+
+            <div class="row justify-content-between">
+                <div class="col-4">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" style="height:300px; overflow:hidden;" src="{{ url_for('static', filename='assets/Gaurish.jpg') }}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">President Gaurish Gaur</h5>
+                            <p class="card-text">Class of 2022, Gaurish has been a club member for 4 years.</p>
+                            <a href="mailto: gaurishgaur3@gmail.com"" class="btn btn-primary">Email</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="{{ url_for('static', filename='assets/Sarah.jpg') }}" alt="Card image cap" style="height:300px; overflow:hidden;">
+                        <div class="card-body">
+                            <h5 class="card-title">President Sarah Benewal</h5>
+                            <p class="card-text">Class of 2022, Sarah has been a club member for 4 years.</p>
+                            <a href="#" class="btn btn-primary">Email</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </body>
